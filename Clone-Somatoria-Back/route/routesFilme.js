@@ -17,11 +17,10 @@ router.get('/', (req, res)=>{
 /* ROTA DE INSERÇÃO DE Filme */
 router.post('/inserirFilme', (req, res)=>{
 
-    let { cod_genero, nome_Filme, diretor_Filme, descricao_Filme } = req.body;
+    let {  cod_genero, nome_Filme, diretor_Filme, descricao_Filme } = req.body;
 
     modelFilme.create(
         {
-
             cod_genero,
             nome_Filme,
             diretor_Filme,
@@ -82,7 +81,7 @@ router.get('/listagemFilmes', (req, res)=>{
 });
 
 /* ROTA DE LISTAGEM DE Filme POR CÓDIGO DE Filme*/
-router.get('/listagemFilme/:cod_Filme', (req, res)=>{
+router.get('/detailFilme/:cod_Filme', (req, res)=>{
 
     let { cod_Filme } = req.params;
 
